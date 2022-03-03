@@ -27,6 +27,17 @@ public class TesteConta {
 		calc.registra(seguro);
 		
 		System.out.println(calc.getTotalImposto());
+		
+		Conta conta = new ContaCorrente(123, 321);
+		
+		conta.depositar(200);
+		try {
+		conta.sacar(1900);
+		} catch(Exception ex) {
+			System.out.println(ex.getMessage());
+		}
+		System.out.println(conta.getSaldo());
+		
 
 	}
 

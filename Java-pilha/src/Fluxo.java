@@ -11,7 +11,7 @@ public class Fluxo {
         System.out.println("Ini do metodo1");
         try {
         	metodo2();
-        } catch(ArithmeticException e) {
+        } catch(Exception e) {
         	System.out.println("ArithmeticException");
         }
         System.out.println("Fim do metodo1");
@@ -21,9 +21,10 @@ public class Fluxo {
         System.out.println("Ini do metodo2");
         for(int i = 1; i <= 5; i++) {
             System.out.println(i);
-            int a = i / 0;
+            int a = i/ 0;
         }
         System.out.println("Fim do metodo2");
+        throw new MinhaExcecao("Deu Ruim!");
     }
     
     
