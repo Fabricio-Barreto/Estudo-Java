@@ -1,8 +1,10 @@
+package br.com.bytebank.banco.modelo;
+
 public class Conta {
 	private double saldo;
 	private int agencia;
 	private int numero;
-	private ClienteBanco titular;
+	private Cliente titular;
 	private static int totalDeContas;
 	
 	public Conta(int agencia, int numero) {
@@ -37,11 +39,11 @@ public class Conta {
 		System.out.println("O total de contas é " + Conta.totalDeContas);
 	}
 	
-	public void setCliente(ClienteBanco cliente) {
+	public void setCliente(Cliente cliente) {
 		this.titular = cliente;
 	}
 	
-	public ClienteBanco getCliente() {
+	public Cliente getCliente() {
 		return this.titular;
 	}
 	
@@ -63,6 +65,10 @@ public class Conta {
 			return true;
 		}	
 		return false;
+	}
+	
+	public String toString() {
+		return "Numero: " + this.numero + ", Agencia: " + this.agencia;
 	}
 	
 }

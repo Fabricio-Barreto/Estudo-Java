@@ -1,3 +1,4 @@
+package br.com.bytebank.banco.modelo;
 
 public class ContaCorrente extends Conta implements Tributavel {
 
@@ -15,6 +16,10 @@ public class ContaCorrente extends Conta implements Tributavel {
 	public double getValorImposto() {
 
 		return super.getSaldo() * 0.01;
+	}
+	
+	public String toString() {
+		return "ContaCorrente, " + super.toString();
 	}
 	
 }
